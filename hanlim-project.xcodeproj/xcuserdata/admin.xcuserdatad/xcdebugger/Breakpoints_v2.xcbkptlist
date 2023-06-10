@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "918E010A-7865-4F5F-88F9-9F9A0C6647CA"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ch09-hanlim/PlanGroupViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "PlanGroupViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - b28a0683c21e6938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.planGroupTableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - 1bd655d64b5c3d0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.planGroupTableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - 45e0465cd92af23b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.planGroupTableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - b4fff61ce6620c78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.planGroupTableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - 8c8a2a44aadf043b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ch09_hanlim.PlanGroupViewController"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "7F9A5278-34B5-4FE1-8A31-673C0C9D6F34 - 948a9a44e71e512d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ch09_hanlim.PlanGroupViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ch09_hanlim.PlanGroupViewController&gt;"
+                  moduleName = "ch09-hanlim"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Desktop/ch09-hanlim/ch09-hanlim/PlanGroupViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
