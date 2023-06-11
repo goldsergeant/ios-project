@@ -25,34 +25,45 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         style.messageColor = .blue
-        
-        if let user = Auth.auth().currentUser {
 
-            emailTextField.placeholder = "이미 로그인 된 상태입니다."
-
-            passwordTextField.placeholder = "이미 로그인 된 상태입니다."
-
-            loginButton.setTitle("이미 로그인 된 상태입니다.", for: .normal)
-
-        }
-
+    }
+    @IBAction func signUpButtonTouched(_ sender: UIButton) {
+        //화면전환버튼
+         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SignUpViewController") else {return}
+         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     @IBAction func loginButtonTouched(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            
-            if user != nil{
-                
-                self.view.makeToast("login success")
-                
-            }
-            
-            else{
-                self.view.makeToast("login fail")
-                
-            }
-        }
+        // Firebase 인증 로직 수행 (예: 이메일/비밀번호 인증)
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] (_, error) in
+               guard let self = self else { return }
+               
+               if let error = error {
+                   // 로그인 실패 처리
+                   self.view.makeToast("login failed")
+               } else {
+                   
+                   // 메인 화면으로 전환
+                   let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "PlanGroupViewController") as! PlanGroupViewController
+                   self.navigationController?.pushViewController(mainVC, animated: true)
+               }
+           }
     }
     
 
+}
+
+extension LoginViewController{
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if Auth.auth().currentUser != nil {
+            // 메인 화면으로 전환
+            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "PlanGroupViewController") as! PlanGroupViewController
+            self.navigationController?.pushViewController(mainVC, animated: true)
+        } else {
+          // No user is signed in.
+          // ...
+        }
+    }
 }
