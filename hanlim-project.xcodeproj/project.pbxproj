@@ -16,6 +16,7 @@
 		84B384D72A358BE70056F28A /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D62A358BE70056F28A /* Toast */; };
 		84B384D92A358D980056F28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B384D82A358D980056F28A /* SignUpViewController.swift */; };
 		84B920802A3574E9003CA9C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */; };
+		84ED40EF2A35A3540036036E /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED40EE2A35A3540036036E /* BoardViewController.swift */; };
 		84FBC30D29FF445A00EB64E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */; };
 		84FBC30F29FF445A00EB64E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */; };
 		84FBC31129FF445A00EB64E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC31029FF445A00EB64E6 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbFirebase.swift; sourceTree = "<group>"; };
 		84B384D82A358D980056F28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84ED40EE2A35A3540036036E /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		84FBC30929FF445A00EB64E6 /* hanlim-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hanlim-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */,
 				84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */,
 				84B384D82A358D980056F28A /* SignUpViewController.swift */,
+				84ED40EE2A35A3540036036E /* BoardViewController.swift */,
 			);
 			path = "hanlim-project";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				84FBC30D29FF445A00EB64E6 /* AppDelegate.swift in Sources */,
 				84B384D92A358D980056F28A /* SignUpViewController.swift in Sources */,
 				84FBC32F2A087DD200EB64E6 /* PlanDetailViewController.swift in Sources */,
+				84ED40EF2A35A3540036036E /* BoardViewController.swift in Sources */,
 				84FBC30F29FF445A00EB64E6 /* SceneDelegate.swift in Sources */,
 				84FBC3312A08930500EB64E6 /* Owner.swift in Sources */,
 				84FBC32129FF44B300EB64E6 /* PlanGroupViewController.swift in Sources */,

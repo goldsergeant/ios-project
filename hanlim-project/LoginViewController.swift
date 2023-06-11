@@ -44,8 +44,9 @@ class LoginViewController: UIViewController {
                } else {
                    
                    // 메인 화면으로 전환
-                   let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "PlanGroupViewController") as! PlanGroupViewController
-                   self.navigationController?.pushViewController(mainVC, animated: true)
+                   let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                   mainVC.modalPresentationStyle = .fullScreen
+                   self.present(mainVC,animated: true,completion: nil)
                }
            }
     }
@@ -59,8 +60,9 @@ extension LoginViewController{
         
         if Auth.auth().currentUser != nil {
             // 메인 화면으로 전환
-            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "PlanGroupViewController") as! PlanGroupViewController
-            self.navigationController?.pushViewController(mainVC, animated: true)
+            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+            mainVC.modalPresentationStyle = .fullScreen
+            self.present(mainVC,animated: true,completion: nil)
         } else {
           // No user is signed in.
           // ...
