@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840AD6812A1B3481006FA6F8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 840AD6802A1B3481006FA6F8 /* FirebaseFirestore */; };
 		840AD6832A1B6D96006FA6F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840AD6822A1B6D96006FA6F8 /* GoogleService-Info.plist */; };
 		840AD6852A1B6FBF006FA6F8 /* DbFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */; };
 		840C80C02A1AF0BE00F14D70 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 840C80BF2A1AF0BE00F14D70 /* FSCalendar */; };
+		84B384D02A3584B20056F28A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384CF2A3584B20056F28A /* FirebaseAuth */; };
+		84B384D22A3584B20056F28A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D12A3584B20056F28A /* FirebaseDatabase */; };
+		84B384D42A3584B20056F28A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D32A3584B20056F28A /* FirebaseFirestore */; };
+		84B384D72A358BE70056F28A /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D62A358BE70056F28A /* Toast */; };
+		84B384D92A358D980056F28A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B384D82A358D980056F28A /* SignUpViewController.swift */; };
+		84B920802A3574E9003CA9C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */; };
 		84FBC30D29FF445A00EB64E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */; };
 		84FBC30F29FF445A00EB64E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */; };
 		84FBC31129FF445A00EB64E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC31029FF445A00EB64E6 /* ViewController.swift */; };
@@ -31,6 +36,8 @@
 /* Begin PBXFileReference section */
 		840AD6822A1B6D96006FA6F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbFirebase.swift; sourceTree = "<group>"; };
+		84B384D82A358D980056F28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84FBC30929FF445A00EB64E6 /* hanlim-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hanlim-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +62,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B384D22A3584B20056F28A /* FirebaseDatabase in Frameworks */,
+				84B384D42A3584B20056F28A /* FirebaseFirestore in Frameworks */,
 				840C80C02A1AF0BE00F14D70 /* FSCalendar in Frameworks */,
-				840AD6812A1B3481006FA6F8 /* FirebaseFirestore in Frameworks */,
+				84B384D72A358BE70056F28A /* Toast in Frameworks */,
+				84B384D02A3584B20056F28A /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +110,8 @@
 				84FBC3302A08930500EB64E6 /* Owner.swift */,
 				84FBC3322A08E35600EB64E6 /* SelectContentViewController.swift */,
 				840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */,
+				84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */,
+				84B384D82A358D980056F28A /* SignUpViewController.swift */,
 			);
 			path = "hanlim-project";
 			sourceTree = "<group>";
@@ -122,7 +134,10 @@
 			name = "hanlim-project";
 			packageProductDependencies = (
 				840C80BF2A1AF0BE00F14D70 /* FSCalendar */,
-				840AD6802A1B3481006FA6F8 /* FirebaseFirestore */,
+				84B384CF2A3584B20056F28A /* FirebaseAuth */,
+				84B384D12A3584B20056F28A /* FirebaseDatabase */,
+				84B384D32A3584B20056F28A /* FirebaseFirestore */,
+				84B384D62A358BE70056F28A /* Toast */,
 			);
 			productName = "ch09-hanlim";
 			productReference = 84FBC30929FF445A00EB64E6 /* hanlim-project.app */;
@@ -154,7 +169,8 @@
 			mainGroup = 84FBC30029FF445A00EB64E6;
 			packageReferences = (
 				840C80BE2A1AF0BE00F14D70 /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				840AD67F2A1B3481006FA6F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				84B384CE2A3584B20056F28A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				84B384D52A358BE60056F28A /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 84FBC30A29FF445A00EB64E6 /* Products */;
 			projectDirPath = "";
@@ -184,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B920802A3574E9003CA9C4 /* LoginViewController.swift in Sources */,
 				84FBC32529FF46D000EB64E6 /* Database.swift in Sources */,
 				84FBC31129FF445A00EB64E6 /* ViewController.swift in Sources */,
 				84FBC3332A08E35600EB64E6 /* SelectContentViewController.swift in Sources */,
@@ -192,6 +209,7 @@
 				84FBC32729FF46EB00EB64E6 /* DbMemory.swift in Sources */,
 				840AD6852A1B6FBF006FA6F8 /* DbFirebase.swift in Sources */,
 				84FBC30D29FF445A00EB64E6 /* AppDelegate.swift in Sources */,
+				84B384D92A358D980056F28A /* SignUpViewController.swift in Sources */,
 				84FBC32F2A087DD200EB64E6 /* PlanDetailViewController.swift in Sources */,
 				84FBC30F29FF445A00EB64E6 /* SceneDelegate.swift in Sources */,
 				84FBC3312A08930500EB64E6 /* Owner.swift in Sources */,
@@ -416,14 +434,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		840AD67F2A1B3481006FA6F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
 		840C80BE2A1AF0BE00F14D70 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
@@ -432,18 +442,49 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		84B384CE2A3584B20056F28A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		84B384D52A358BE60056F28A /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		840AD6802A1B3481006FA6F8 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 840AD67F2A1B3481006FA6F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
 		840C80BF2A1AF0BE00F14D70 /* FSCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 840C80BE2A1AF0BE00F14D70 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		84B384CF2A3584B20056F28A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B384CE2A3584B20056F28A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		84B384D12A3584B20056F28A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B384CE2A3584B20056F28A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		84B384D32A3584B20056F28A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B384CE2A3584B20056F28A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		84B384D62A358BE70056F28A /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B384D52A358BE60056F28A /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
