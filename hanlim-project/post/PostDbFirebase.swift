@@ -31,6 +31,8 @@ class PostDbFirebase: PostDatabase{
         // 저장 형태로 만든다
         let storeDate: [String : Any] = ["date": post.date, "data": post.toDict()]
         reference.document(post.key).setData(storeDate)
+        
+        reference.order(by: "date", descending: true)
     }
     
     func queryPost() {
@@ -64,7 +66,10 @@ class PostDbFirebase: PostDatabase{
                 case    .modified: action = .Modify
                 case    .removed: action = .Delete
             }
+            
             if let parentNotification = parentNotification {parentNotification(post, action)} // 부모에게 알림
+            
+            reference.order(by: "date", descending: true)
         }
     }
 }

@@ -73,7 +73,7 @@ extension PostGroup{     // PlanGroup.swift
 }
 
 extension PostGroup{         // PlanGroup.swift
-    private func addPost(post:Post){ posts.append(post) }
+    private func addPost(post:Post){ posts.insert(post, at: 0) }
     private func modifyPost(modifiedPost: Post){
         if let index = find(modifiedPost.key){
             posts[index] = modifiedPost

@@ -450,13 +450,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nY-bZ-tyY">
-                                                    <rect key="frame" x="8" y="8" width="41.333333333333336" height="20"/>
+                                                    <rect key="frame" x="8" y="8" width="200" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H0-iB-gBK">
-                                                    <rect key="frame" x="8" y="33" width="41.333333333333336" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2H0-iB-gBK">
+                                                    <rect key="frame" x="8" y="33" width="200" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="bqD-g8-XrX"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -571,7 +574,11 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="글쓰기" id="6R4-8y-8HL">
-                                        <barButtonItem key="rightBarButtonItem" title="완료" id="bT9-qV-gCa"/>
+                                        <barButtonItem key="rightBarButtonItem" title="완료" id="bT9-qV-gCa">
+                                            <connections>
+                                                <action selector="writePost:" destination="XdQ-Jo-QPv" id="I2V-bd-bZC"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -605,6 +612,7 @@
                     </view>
                     <connections>
                         <outlet property="contentTextView" destination="hq2-Zo-Q0r" id="97O-oB-oCJ"/>
+                        <outlet property="titleTextField" destination="zF5-mn-diF" id="uYK-mO-RpR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exi-Qk-iQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
