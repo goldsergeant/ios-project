@@ -23,6 +23,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
                 // 연결을 확인하기 위하여 테스트 데이터를 write해 본다
                 Firestore.firestore().collection("hanlim").document("mykey").setData(["name": "Geum Han Lim"])
+        
+        
+        // Storyboard 인스턴스 생성
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Firebase 로그인 상태 확인
+          if let currentUser = Auth.auth().currentUser {
+              // 사용자가 로그인한 경우
+              // root view를 설정하는 코드를 추가합니다. 예를 들어, 메인 화면으로 이동할 수 있는 view controller를 설정합니다.
+              // 루트 뷰 컨트롤러 설정
+                 let rootViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+              // 윈도우 인스턴스 생성 및 루트 뷰 컨트롤러 설정
+              let appDelegate = UIApplication.shared.delegate as! AppDelegate
+              UIApplication.shared.windows.first?.rootViewController = rootViewController
+
+          }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
