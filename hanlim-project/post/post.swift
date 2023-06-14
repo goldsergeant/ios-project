@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestore
 
 class Post: NSObject , NSCoding{
+    var key: String
     var date: Date
     var owner: String?
     var title: String
@@ -17,6 +18,7 @@ class Post: NSObject , NSCoding{
     var comments: Array<Comment>?
     
     init(date: Date, owner: String?,title: String,content: String,like: Int?, comments: Array<Comment>?){
+        self.key = UUID().uuidString
         self.date = Date(timeInterval: 0, since: date)
         self.owner = Owner.getOwner()
         self.title = title
@@ -28,6 +30,7 @@ class Post: NSObject , NSCoding{
     
     // archiving할때 호출된다
     func encode(with aCoder: NSCoder) {      // 내부적으로 String의 encode가 호출된다
+        aCoder.encode(key, forKey: "key")
         aCoder.encode(date, forKey: "date")
         aCoder.encode(owner, forKey: "owner")
         aCoder.encode(title, forKey: "title")
@@ -37,6 +40,7 @@ class Post: NSObject , NSCoding{
     }
     // unarchiving할때 호출된다
     required init(coder aDecoder: NSCoder) {
+        key = aDecoder.decodeObject(forKey: "key") as! String? ?? "" // 내부적으로 String.init가 호출된다
         date = aDecoder.decodeObject(forKey: "date") as! Date
         owner = aDecoder.decodeObject(forKey: "owner") as? String
         title = aDecoder.decodeObject(forKey: "title") as! String? ?? ""
@@ -57,6 +61,8 @@ extension Post{
 extension Post{        // Plan.swift
     func clone() -> Post {
         let clonee = Post()
+        
+        clonee.key = self.key    // key는 String이고 String은 struct이다. 따라서 복제가 된다
         clonee.date = Date(timeInterval: 0, since: self.date) // Date는 struct가 아니라 class이기 때문
         clonee.owner = self.owner
         clonee.title = self.title
@@ -70,6 +76,8 @@ extension Post{        // Plan.swift
 extension Post{
     func toDict() -> [String: Any?]{
         var dict: [String: Any?] = [:]
+        
+        dict["key"] = key
         dict["date"] = Timestamp(date: date)
         dict["owner"] = owner
         dict["title"] = title
@@ -80,6 +88,7 @@ extension Post{
     }
     static func toPost (dict: [String: Any?]) -> Post {
         let post = Post()
+        post.key = dict["key"] as! String
         post.date = Date()
         if let timestamp = dict["date"] as? Timestamp{
             post.date = timestamp.dateValue()
