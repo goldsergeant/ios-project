@@ -15,9 +15,9 @@ class Post: NSObject , NSCoding{
     var title: String
     var content: String
     var like: Int?
-    var comments: Array<Comment>?
+    var comments: Array<Comment> = []
     
-    init(date: Date, owner: String?,title: String,content: String,like: Int?, comments: Array<Comment>?){
+    init(date: Date, owner: String?,title: String,content: String,like: Int?, comments: Array<Comment>){
         self.key = UUID().uuidString
         self.date = Date(timeInterval: 0, since: date)
         self.owner = Owner.getOwner()
@@ -45,8 +45,8 @@ class Post: NSObject , NSCoding{
         owner = aDecoder.decodeObject(forKey: "owner") as? String
         title = aDecoder.decodeObject(forKey: "title") as! String? ?? ""
         content = aDecoder.decodeObject(forKey: "content") as! String? ?? ""
-        like = aDecoder.decodeObject(forKey: "like") as? Int
-        comments = aDecoder.decodeObject(forKey: "comments") as? Array<Comment>
+        like = aDecoder.decodeObject(forKey: "like") as? Int ?? 0
+        comments = aDecoder.decodeObject(forKey: "comments") as! Array<Comment>
         super.init()
     }
     
@@ -97,7 +97,7 @@ extension Post{
         post.title = dict["title"] as! String
         post.content = dict["content"] as! String
         post.like = dict["like"] as? Int
-        post.comments = dict["comments"] as? Array<Comment>
+        post.comments = dict["comments"] as! Array<Comment>
         return post
     }
 }
