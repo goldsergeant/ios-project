@@ -429,7 +429,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZn-jk-TPF">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="게시판" style="browser" id="Vqm-ii-eWF"/>
+                                    <navigationItem title="게시판" style="browser" id="Vqm-ii-eWF">
+                                        <barButtonItem key="rightBarButtonItem" title="글쓰기" id="rLf-nx-9UV">
+                                            <connections>
+                                                <action selector="movePostWriteView:" destination="Bnu-fo-KC8" id="1kX-Nw-tDx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8kC-Ab-Y0z">
@@ -553,6 +559,58 @@
             </objects>
             <point key="canvasLocation" x="2310.6870229007632" y="-704.22535211267609"/>
         </scene>
+        <!--Post Write View Controller-->
+        <scene sceneID="UJ0-iq-64w">
+            <objects>
+                <viewController storyboardIdentifier="PostWriteViewController" id="XdQ-Jo-QPv" customClass="PostWriteViewController" customModule="hanlim_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eh3-Df-BCa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc3-Q2-oYT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="글쓰기" id="6R4-8y-8HL">
+                                        <barButtonItem key="rightBarButtonItem" title="완료" id="bT9-qV-gCa"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-mn-diF">
+                                <rect key="frame" x="0.0" y="123" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용을 입력하세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hq2-Zo-Q0r">
+                                <rect key="frame" x="0.0" y="177" width="393" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GLt-LQ-RYr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zF5-mn-diF" firstAttribute="leading" secondItem="GLt-LQ-RYr" secondAttribute="leading" id="32E-zi-PYf"/>
+                            <constraint firstItem="GLt-LQ-RYr" firstAttribute="bottom" secondItem="hq2-Zo-Q0r" secondAttribute="bottom" id="3Sk-Qo-J2A"/>
+                            <constraint firstItem="hq2-Zo-Q0r" firstAttribute="leading" secondItem="GLt-LQ-RYr" secondAttribute="leading" id="5o5-So-twb"/>
+                            <constraint firstItem="GLt-LQ-RYr" firstAttribute="trailing" secondItem="hq2-Zo-Q0r" secondAttribute="trailing" id="I7T-8l-lma"/>
+                            <constraint firstItem="hq2-Zo-Q0r" firstAttribute="top" secondItem="zF5-mn-diF" secondAttribute="bottom" constant="20" id="bH1-zj-dHg"/>
+                            <constraint firstItem="zF5-mn-diF" firstAttribute="top" secondItem="uc3-Q2-oYT" secondAttribute="bottom" constant="20" id="dyR-kn-WMG"/>
+                            <constraint firstItem="uc3-Q2-oYT" firstAttribute="top" secondItem="GLt-LQ-RYr" secondAttribute="top" id="e4M-hq-Eb6"/>
+                            <constraint firstItem="uc3-Q2-oYT" firstAttribute="leading" secondItem="zF5-mn-diF" secondAttribute="leading" id="tZi-NE-hf1"/>
+                            <constraint firstItem="uc3-Q2-oYT" firstAttribute="trailing" secondItem="zF5-mn-diF" secondAttribute="trailing" id="tzm-W2-RD6"/>
+                            <constraint firstItem="GLt-LQ-RYr" firstAttribute="trailing" secondItem="zF5-mn-diF" secondAttribute="trailing" id="xMH-h2-FYE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="hq2-Zo-Q0r" id="97O-oB-oCJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exi-Qk-iQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3990" y="-1335"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VwL-EJ-dnt"/>
@@ -562,6 +620,9 @@
         <image name="heart" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

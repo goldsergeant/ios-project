@@ -23,6 +23,7 @@
 		84F607622A39902100350BEE /* PostGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F607612A39902100350BEE /* PostGroup.swift */; };
 		84F607642A39933500350BEE /* PostDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F607632A39933500350BEE /* PostDatabase.swift */; };
 		84F607662A3993BF00350BEE /* PostDbFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F607652A3993BF00350BEE /* PostDbFirebase.swift */; };
+		84F607682A39BE1800350BEE /* PostWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F607672A39BE1800350BEE /* PostWriteViewController.swift */; };
 		84FBC30D29FF445A00EB64E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */; };
 		84FBC30F29FF445A00EB64E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */; };
 		84FBC31129FF445A00EB64E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC31029FF445A00EB64E6 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		84F607612A39902100350BEE /* PostGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGroup.swift; sourceTree = "<group>"; };
 		84F607632A39933500350BEE /* PostDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDatabase.swift; sourceTree = "<group>"; };
 		84F607652A3993BF00350BEE /* PostDbFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDbFirebase.swift; sourceTree = "<group>"; };
+		84F607672A39BE1800350BEE /* PostWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteViewController.swift; sourceTree = "<group>"; };
 		84FBC30929FF445A00EB64E6 /* hanlim-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hanlim-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBC30C29FF445A00EB64E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FBC30E29FF445A00EB64E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				84F607612A39902100350BEE /* PostGroup.swift */,
 				84F607632A39933500350BEE /* PostDatabase.swift */,
 				84F607652A3993BF00350BEE /* PostDbFirebase.swift */,
+				84F607672A39BE1800350BEE /* PostWriteViewController.swift */,
 			);
 			path = post;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B920802A3574E9003CA9C4 /* LoginViewController.swift in Sources */,
+				84F607682A39BE1800350BEE /* PostWriteViewController.swift in Sources */,
 				84FBC32529FF46D000EB64E6 /* Database.swift in Sources */,
 				84F6075B2A3974C900350BEE /* post.swift in Sources */,
 				84FBC31129FF445A00EB64E6 /* ViewController.swift in Sources */,

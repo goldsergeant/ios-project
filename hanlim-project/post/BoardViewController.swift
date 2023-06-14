@@ -24,6 +24,10 @@ class BoardViewController: UIViewController {
 
         
     }
+    @IBAction func movePostWriteView(_ sender: UIBarButtonItem) {
+        let postWriteVC = self.storyboard?.instantiateViewController(withIdentifier: "PostWriteViewController") as! PostWriteViewController
+        self.present(postWriteVC,animated: true,completion: nil)
+    }
     override func viewDidAppear(_ animated: Bool) {
         // 여기서 호출하는 이유는 present라는 함수 ViewController의 함수인데 이함수는 ViewController의 Layout이 완료된 이후에만 동작하기 때문
         Owner.loadOwner(sender: self)
