@@ -14,9 +14,9 @@ class Comment: NSObject , NSCoding{
     var owner: String?
     var content: String
     var like: Int?
-    var reComments: Array<ReComment>?
+    var reComments: Array<ReComment> = []
     
-    init(date: Date, owner: String?,content: String,like: Int?, reComments: Array<ReComment>?){
+    init(date: Date, owner: String?,content: String,like: Int?, reComments: Array<ReComment>){
         self.key = UUID().uuidString
         self.date = Date(timeInterval: 0, since: date)
         self.owner = Owner.getOwner()
@@ -42,7 +42,7 @@ class Comment: NSObject , NSCoding{
         owner = aDecoder.decodeObject(forKey: "owner") as? String
         content = aDecoder.decodeObject(forKey: "content") as! String? ?? ""
         like = aDecoder.decodeObject(forKey: "like") as? Int
-        reComments = aDecoder.decodeObject(forKey: "reComments") as? Array<ReComment>
+        reComments = aDecoder.decodeObject(forKey: "reComments") as! Array<ReComment>
         super.init()
     }
 }
@@ -90,7 +90,7 @@ extension Comment{
         comment.owner = dict["owner"] as? String
         comment.content = dict["content"] as! String
         comment.like = dict["like"] as? Int
-        comment.reComments = dict["reComments"] as? Array<ReComment>
+        comment.reComments = (dict["reComments"] as? Array<ReComment>) ?? []
         return comment
     }
 }

@@ -83,7 +83,7 @@ extension Post{
         dict["title"] = title
         dict["content"] = content
         dict["like"] = like
-        dict["comments"] = comments
+        dict["comments"] = convertCommentsToDict(comments: comments)
         return dict
     }
     static func toPost (dict: [String: Any?]) -> Post {
@@ -97,7 +97,44 @@ extension Post{
         post.title = dict["title"] as! String
         post.content = dict["content"] as! String
         post.like = dict["like"] as? Int
-        post.comments = dict["comments"] as! Array<Comment>
+        post.comments = toComments(arr: dict["comments"] as! [[String : Any?]])
         return post
+    }
+}
+extension Post{
+    static func toComments(arr:[[String:Any?]])-> Array<Comment>{
+        var tmpArr:Array<Comment> = []
+        for element in arr{
+            tmpArr.append(Comment.toComment(dict: element))
+        }
+         
+        return tmpArr
+    }
+}
+
+extension Post{
+    func convertCommentsToDict(comments: Array<Comment>) -> Array<[String:Any?]>{
+        var arr:[[String:Any?]] = []
+        
+        for comment in comments {
+            var dict:[String:Any?] = [:]
+            dict["key"] = comment.key
+            dict["date"] = Timestamp(date: comment.date)
+            dict["owner"] = comment.owner
+            dict["content"] = comment.content
+            dict["like"] = comment.like
+            dict["reComments"] = convertReCommentsToDict(reComments: comment.reComments)
+            
+            arr.append(dict)
+        }
+        return arr
+    }
+}
+
+extension Post{
+    func convertReCommentsToDict(reComments: Array<ReComment>) -> Array<[String:Any?]>{
+        var arr:[[String:Any?]] = []
+        
+        return arr
     }
 }

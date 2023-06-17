@@ -17,9 +17,10 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var commentTableView: UITableView!
     @IBOutlet weak var writeTimeLabel: UILabel!
     
+    @IBOutlet weak var commentTextField: UITextField!
     var post:Post!
     var saveChangeDelegate: ((Post)-> Void)?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +30,7 @@ class PostDetailViewController: UIViewController {
         
         commentTableView.delegate = self
         commentTableView.dataSource = self
-
+        
     }
     
     @IBAction func goToBack(_ sender: UIButton) {
@@ -45,6 +46,18 @@ class PostDetailViewController: UIViewController {
         }
         
     }
+    @IBAction func writeComment(_ sender: UIButton) {
+        if let text = commentTextField.text{
+            if text != ""{
+                var comment = Comment()
+                comment.content = text
+                
+                post.comments.append(comment)
+                saveChangeDelegate!(post)
+                commentTextField.text = nil
+                commentTableView.reloadData()
+            }}
+    }
     
 }
 
@@ -59,7 +72,7 @@ extension PostDetailViewController{
         titleLabel.text=post.title
         writeTimeLabel.text=post.date.toStringDateTime()
         contentTextView.sizeToFit()
-    
+        
     }
 }
 
@@ -76,7 +89,7 @@ extension PostDetailViewController: UITableViewDataSource{
         (cell.contentView.subviews[0] as! UILabel).text = comment.owner
         (cell.contentView.subviews[2] as! UILabel).text = comment.content
         (cell.contentView.subviews[3] as! UILabel).text = comment.date.toStringDateTime()
-        (cell.contentView.subviews[7] as! UILabel).text = String(comment.like!)
+        (cell.contentView.subviews[8] as! UILabel).text = String(comment.like!)
         
         return cell
     }

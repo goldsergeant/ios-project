@@ -498,9 +498,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-9k-C4u">
-                                                    <rect key="frame" x="82" y="16" width="41.333333333333343" height="22.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-9k-C4u">
+                                                    <rect key="frame" x="82" y="16" width="150" height="22.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rh6-xH-Hpl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -630,6 +633,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="arrow.up.right.square.fill" catalog="system">
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="writeComment:" destination="ge0-Zh-nnI" eventType="touchUpInside" id="jRT-6F-1Fi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -683,6 +689,7 @@
                     <connections>
                         <outlet property="commentCountLabel" destination="qZ1-Mh-AxR" id="f9O-sp-yiq"/>
                         <outlet property="commentTableView" destination="88s-6L-Gy8" id="xRo-pd-M3v"/>
+                        <outlet property="commentTextField" destination="IzJ-Xm-aEL" id="g5E-mY-ssR"/>
                         <outlet property="contentTextView" destination="AIa-hW-h25" id="L4r-lK-w5g"/>
                         <outlet property="likeCountLabel" destination="PqR-t1-y0g" id="4q4-rc-4wa"/>
                         <outlet property="titleLabel" destination="TFI-6h-aj6" id="q4x-3D-ADH"/>
