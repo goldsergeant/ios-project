@@ -127,9 +127,25 @@ extension BoardViewController{
             guard let post = sender as? Post else {return}
             if let viewController = segue.destination as? PostDetailViewController{
                 viewController.post = post
-                
+                viewController.saveChangeDelegate = saveChange
                 viewController.modalPresentationStyle = .fullScreen
             }
+        }
+    }
+}
+
+extension BoardViewController{    // PlanGroupViewController.swift
+
+    // prepare함수에서 PlanDetailViewController에게 전달한다
+    func saveChange(post: Post){
+
+        // 만약 현재 planGroupTableView에서 선택된 row가 있다면,
+        // 즉, planGroupTableView의 row를 클릭하여 PlanDetailViewController로 전이 한다면
+        if postGroupTableView.indexPathForSelectedRow != nil{
+            postGroup.saveChange(post: post, action: .Modify)
+        }else{
+            // 이경우는 나중에 사용할 것이다.
+            postGroup.saveChange(post: post, action: .Add)
         }
     }
 }
