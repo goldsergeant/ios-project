@@ -115,6 +115,21 @@ extension BoardViewController: UITableViewDelegate{
             return 40
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowPostDetailViewController", sender: self.postGroup.getPosts()[indexPath.row])
+    }
 }
 
-
+extension BoardViewController{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPostDetailViewController"{
+            guard let post = sender as? Post else {return}
+            if let viewController = segue.destination as? PostDetailViewController{
+                viewController.post = post
+                
+                viewController.modalPresentationStyle = .fullScreen
+            }
+        }
+    }
+}

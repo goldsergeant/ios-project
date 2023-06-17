@@ -31,8 +31,6 @@ class PostDbFirebase: PostDatabase{
         // 저장 형태로 만든다
         let storeDate: [String : Any] = ["date": post.date, "data": post.toDict()]
         reference.document(post.key).setData(storeDate)
-        
-        reference.order(by: "date", descending: true)
     }
     
     func queryPost() {
@@ -40,8 +38,8 @@ class PostDbFirebase: PostDatabase{
         if let existQuery = existQuery{    // 이미 적용 쿼리가 있으면 제거, 중복 방지
             existQuery.remove()
         }
-        // where plan.date >= fromDate and plan.date <= toDate
-        let queryReference = reference.order(by: "date",descending: true)
+        
+        let queryReference = reference.order(by: "date")
 
         // onChangingData는 쿼리를 만족하는 데이터가 있거나 firestore내에서 다른 앱에 의하여
         // 데이터가 변경되어 쿼리를 만족하는 데이터가 발생하면 호출해 달라는 것이다.
@@ -68,8 +66,7 @@ class PostDbFirebase: PostDatabase{
             }
             
             if let parentNotification = parentNotification {parentNotification(post, action)} // 부모에게 알림
-            
-            reference.order(by: "date", descending: true)
+        
         }
     }
 }
