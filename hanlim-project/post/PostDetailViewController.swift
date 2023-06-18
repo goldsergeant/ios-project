@@ -38,7 +38,6 @@ class PostDetailViewController: UIViewController {
     }
     
     @IBAction func pressLikeButton(_ sender: UIButton) {
-        print("pressed like")
         if let saveChangeDelegate = saveChangeDelegate{
             post.like!+=1
             likeCountLabel.text = String(post.like!)
@@ -77,19 +76,25 @@ extension PostDetailViewController{
 }
 
 extension PostDetailViewController: UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return post.comments.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell")!
         
         let comment = post.comments[indexPath.row]
+        var likeButton = cell.contentView.subviews[6] as! UIButton
         
         (cell.contentView.subviews[0] as! UILabel).text = comment.owner
         (cell.contentView.subviews[2] as! UILabel).text = comment.content
         (cell.contentView.subviews[3] as! UILabel).text = comment.date.toStringDateTime()
         (cell.contentView.subviews[8] as! UILabel).text = String(comment.like!)
+        
+        likeButton.tag = indexPath.row
+        likeButton.addTarget(self, action:#selector(pressCommentLikeButton(_:)), for: .touchUpInside)
         
         return cell
     }
@@ -107,4 +112,12 @@ extension PostDetailViewController{
             saveChangeDelegate(post!)
         }
     }
+}
+
+extension PostDetailViewController{
+    @objc func pressCommentLikeButton(_ sender: UIButton) {
+        post.comments[sender.tag].like!+=1
+        commentTableView.reloadData()
+//        print("press")
+      }
 }

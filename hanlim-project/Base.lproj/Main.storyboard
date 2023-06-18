@@ -546,6 +546,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system">
                                                         <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="showCommentMenu:" destination="ge0-Zh-nnI" eventType="touchUpInside" id="snx-YI-3mc"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2U-3N-WSp">
                                                     <rect key="frame" x="298" y="16" width="20" height="20"/>
@@ -557,6 +560,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup" catalog="system">
                                                         <color key="baseForegroundColor" systemColor="opaqueSeparatorColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="pressCommentLikeButton:" destination="ge0-Zh-nnI" eventType="touchUpInside" id="1Bq-9J-7nZ"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="byr-je-jOO">
                                                     <rect key="frame" x="95" y="75.666666666666671" width="39" height="18.333333333333329"/>

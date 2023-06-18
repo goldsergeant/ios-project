@@ -10,6 +10,7 @@
 		840AD6832A1B6D96006FA6F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 840AD6822A1B6D96006FA6F8 /* GoogleService-Info.plist */; };
 		840AD6852A1B6FBF006FA6F8 /* DbFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */; };
 		840C80C02A1AF0BE00F14D70 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 840C80BF2A1AF0BE00F14D70 /* FSCalendar */; };
+		84279C9E2A3ED6F400C71995 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84279C9D2A3ED6F400C71995 /* CommentTableViewCell.swift */; };
 		84B384D02A3584B20056F28A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384CF2A3584B20056F28A /* FirebaseAuth */; };
 		84B384D22A3584B20056F28A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D12A3584B20056F28A /* FirebaseDatabase */; };
 		84B384D42A3584B20056F28A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84B384D32A3584B20056F28A /* FirebaseFirestore */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		840AD6822A1B6D96006FA6F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		840AD6842A1B6FBF006FA6F8 /* DbFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbFirebase.swift; sourceTree = "<group>"; };
+		84279C9D2A3ED6F400C71995 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		84B384D82A358D980056F28A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84B9207F2A3574E9003CA9C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84ED40EE2A35A3540036036E /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				84F607652A3993BF00350BEE /* PostDbFirebase.swift */,
 				84F607672A39BE1800350BEE /* PostWriteViewController.swift */,
 				84F607692A3C58A300350BEE /* PostDetailViewController.swift */,
+				84279C9D2A3ED6F400C71995 /* CommentTableViewCell.swift */,
 			);
 			path = post;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				84B920802A3574E9003CA9C4 /* LoginViewController.swift in Sources */,
 				84F6076A2A3C58A300350BEE /* PostDetailViewController.swift in Sources */,
+				84279C9E2A3ED6F400C71995 /* CommentTableViewCell.swift in Sources */,
 				84F607682A39BE1800350BEE /* PostWriteViewController.swift in Sources */,
 				84FBC32529FF46D000EB64E6 /* Database.swift in Sources */,
 				84F6075B2A3974C900350BEE /* post.swift in Sources */,
