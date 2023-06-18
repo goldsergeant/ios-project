@@ -119,5 +119,6 @@ extension PostDetailViewController{
         post.comments[sender.tag].like!+=1
         commentTableView.reloadData()
 //        print("press")
+        saveChangeDelegate!(post)
       }
 }

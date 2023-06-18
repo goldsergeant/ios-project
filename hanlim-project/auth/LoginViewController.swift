@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if Auth.auth().currentUser != nil {
             // 메인 화면으로 전환
             let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
