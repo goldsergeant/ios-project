@@ -122,3 +122,15 @@ extension PostDetailViewController{
         saveChangeDelegate!(post)
       }
 }
+
+extension PostDetailViewController{
+    override func viewDidAppear(_ animated: Bool) {
+        if post.owner == Owner.owner{
+            self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "삭제", style: .plain, target: self, action: #selector(deletePost(_:)))
+        }
+    }
+    
+    @objc func deletePost(_ sender: Any?) {
+        
+    }
+}
